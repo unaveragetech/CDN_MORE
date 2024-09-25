@@ -34,8 +34,7 @@ Because jQuery’s still got a place in our hearts ❤️
 ```html
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 ```
-Make your site look like it hit the gym with some **Bootstrap** 💪
-
+Make your site look like it hit the gym with some **Bootstrap** 💪💪
 And so many more fun ways to impress your friends at your next coder party 🎉 (don’t worry, they exist).
 
 ## Instructions 📜

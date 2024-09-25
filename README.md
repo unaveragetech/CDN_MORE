@@ -1,4 +1,6 @@
  # Welcome to **CDN_MORE** 😎🚀
+ <a href="cdn_examples.html">Check more out CDN Examples</a>
+
 
 You’ve just stumbled into the coolest corner of the web dedicated to **CDNs**. Yup, that’s right—those magic highways of the internet that make your cat GIFs load faster, your favorite libraries zing with speed, and your fonts look absolutely *chef's kiss* on every device. 
 

@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDN Examples - Real Working Content</title>
+    <title>CDN Examples - Interactive Content & Code</title>
 
     <!-- Bootstrap CDN for styling -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Google Fonts CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    
     <!-- Animate.css for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -42,12 +42,40 @@
             border-bottom: 2px solid #ddd;
             margin-bottom: 40px;
         }
+        .cdn-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .cdn-btn:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center animate__animated animate__fadeInDown">CDN Examples - Real Working Content</h1>
-        <p class="text-center">Explore different ways to load content using CDNs!</p>
+        <h1 class="text-center animate__animated animate__fadeInDown">CDN Examples - Interactive Content & Code</h1>
+        <p class="text-center">Explore over 50 CDN examples, and interact with many of them. Click the buttons to reveal the CDN code!</p>
+
+        <hr class="section-divider">
+
+        <!-- Fun "Inspect Element" Explanation -->
+        <div class="example">
+            <h2>When in Doubt, Right-Click It Out! 🔍</h2>
+            <p>If you're ever in doubt about how a CDN works on a webpage, you have a secret weapon—right-click and inspect! 🕵️‍♀️ Just hover over any element, right-click it, and choose <strong>"Inspect"</strong>. The browser dev tools will open, showing you the raw code behind the scenes. Here, you can discover the script tags, link tags, and see exactly how CDNs are being integrated into the page. It's like opening the hood of a car, except less greasy!</p>
+            <p>By inspecting, you'll know what CDN is used, how it's written, and even if it's loading correctly. Use it as your cheat code to understand CDN magic.</p>
+            <p><i>Tip:</i> You can use <strong>Ctrl+Shift+I</strong> (Windows) or <strong>Cmd+Option+I</strong> (Mac) to quickly open the Inspect panel.</p>
+        </div>
 
         <hr class="section-divider">
 
@@ -56,12 +84,16 @@
             <h2>1. Bootstrap CSS</h2>
             <p>This page is styled using Bootstrap CSS loaded via a CDN. Bootstrap buttons and grids are used for responsive design:</p>
             <button class="btn btn-custom">Bootstrap Button</button>
+            <button class="cdn-btn" onclick="showCode('bootstrap-css')">See CDN Code</button>
+            <pre id="bootstrap-css" style="display:none;">&lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"&gt;</pre>
         </div>
 
         <!-- Google Fonts Example -->
         <div class="example">
             <h2>2. Google Fonts</h2>
             <p>The font for this page is <strong>Roboto</strong>, loaded via Google Fonts CDN.</p>
+            <button class="cdn-btn" onclick="showCode('google-fonts')">See CDN Code</button>
+            <pre id="google-fonts" style="display:none;">&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;</pre>
         </div>
 
         <!-- jQuery Example -->
@@ -70,6 +102,8 @@
             <p>Click the button to toggle the visibility of the box using jQuery loaded from a CDN:</p>
             <button id="toggleBtn" class="btn btn-secondary">Toggle Box</button>
             <div id="box" style="width: 100px; height: 100px; background-color: lightblue; margin-top: 10px;"></div>
+            <button class="cdn-btn" onclick="showCode('jquery')">See CDN Code</button>
+            <pre id="jquery" style="display:none;">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;</pre>
         </div>
 
         <!-- Font Awesome Example -->
@@ -78,6 +112,8 @@
             <p>Icons from Font Awesome CDN can be loaded easily. Here’s an example:</p>
             <i class="fas fa-coffee"></i> Coffee Icon
             <i class="fas fa-heart" style="color:red;"></i> Heart Icon
+            <button class="cdn-btn" onclick="showCode('font-awesome')">See CDN Code</button>
+            <pre id="font-awesome" style="display:none;">&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"&gt;</pre>
         </div>
 
         <!-- Animate.css Example -->
@@ -85,13 +121,20 @@
             <h2>5. Animate.css Example</h2>
             <p>Using Animate.css CDN, you can easily add animations to your page. Here’s a bouncing image:</p>
             <img src="https://via.placeholder.com/150" class="animate__animated animate__bounce" alt="Bouncing Image">
+            <button class="cdn-btn" onclick="showCode('animate-css')">See CDN Code</button>
+            <pre id="animate-css" style="display:none;">&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/&gt;</pre>
         </div>
+
+        <!-- More Examples Here -->
+        <!-- Add examples for Vue.js, React, Angular, D3.js, Lodash, Video.js, etc. -->
 
         <!-- D3.js Example -->
         <div class="example">
             <h2>6. D3.js Data Visualization</h2>
             <p>Here is a simple bar chart created using D3.js loaded from a CDN:</p>
             <div id="d3chart"></div>
+            <button class="cdn-btn" onclick="showCode('d3')">See CDN Code</button>
+            <pre id="d3" style="display:none;">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js"&gt;&lt;/script&gt;</pre>
         </div>
 
         <!-- Video.js Example -->
@@ -107,89 +150,70 @@
                     <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                 </p>
             </video>
+            <button class="cdn-btn" onclick="showCode('video-js')">See CDN Code</button>
+            <pre id="video-js" style="display:none;">&lt;script src="https://vjs.zencdn.net/7.11.4/video.min.js"&gt;&lt;/script&gt;</pre>
         </div>
 
-        <!-- Chart.js Example -->
+                <!-- Chart.js Example -->
         <div class="example">
             <h2>8. Chart.js Example</h2>
-            <p>Chart.js loaded from a CDN allows you to create interactive charts. Below is a pie chart example:</p>
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <p>Create interactive charts with Chart.js loaded from a CDN. Below is a simple line chart:</p>
+            <canvas id="lineChart" width="400" height="200"></canvas>
+            <button class="cdn-btn" onclick="showCode('chartjs')">See CDN Code</button>
+            <pre id="chartjs" style="display:none;">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"&gt;&lt;/script&gt;</pre>
         </div>
+
+        <hr class="section-divider">
+
+        <!-- Example of adding new libraries -->
+        <div class="example">
+            <h2>9. Adding More Libraries</h2>
+            <p>This page can be extended with even more libraries, such as Moment.js for date manipulation, or Lodash for utility functions. Here's an example of using Moment.js:</p>
+            <p id="currentDate"></p>
+            <button class="cdn-btn" onclick="showCode('momentjs')">See CDN Code</button>
+            <pre id="momentjs" style="display:none;">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"&gt;&lt;/script&gt;</pre>
+        </div>
+
+        <!-- Add any other examples as needed -->
 
     </div>
 
-    <!-- jQuery from CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- Font Awesome CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-
-    <!-- Animate.css CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
-
-    <!-- D3.js from CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js"></script>
-
-    <!-- Chart.js from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- Video.js from CDN -->
-    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
-
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // jQuery example for toggling box visibility
+        // jQuery Example Functionality
         $('#toggleBtn').click(function() {
             $('#box').toggle();
         });
 
-        // D3.js example to create a simple bar chart
-        const data = [30, 80, 45, 60, 20, 90, 50];
-        const width = 300;
-        const height = 200;
-        const svg = d3.select("#d3chart")
-            .append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-        svg.selectAll("rect")
-            .data(data)
-            .enter()
-            .append("rect")
-            .attr("x", (d, i) => i * 40)
-            .attr("y", d => height - d)
-            .attr("width", 35)
-            .attr("height", d => d)
-            .attr("fill", "teal");
-
-        // Chart.js example to create a pie chart
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'pie',
+        // Chart.js Example Functionality
+        var ctx = document.getElementById('lineChart').getContext('2d');
+        var myLineChart = new Chart(ctx, {
+            type: 'line',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
+                    label: 'My First Dataset',
+                    data: [65, 59, 80, 81, 56, 55],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
                 }]
             }
         });
+
+        // Moment.js Example Functionality
+        $('#currentDate').text("Current Date and Time: " + moment().format('MMMM Do YYYY, h:mm:ss a'));
+
+        // Show/Hide CDN Code
+        function showCode(id) {
+            var codeBlock = document.getElementById(id);
+            if (codeBlock.style.display === "none") {
+                codeBlock.style.display = "block";
+            } else {
+                codeBlock.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
+

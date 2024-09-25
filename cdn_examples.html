@@ -4,43 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CDN Examples - Real Working Content</title>
-    <!-- Example of Bootstrap from CDN -->
+
+    <!-- Bootstrap CDN for styling -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts example -->
+
+    <!-- Google Fonts CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
         }
+        h1, h2 {
+            margin-top: 40px;
+            font-weight: 700;
+        }
         .container {
             margin-top: 50px;
+        }
+        .example {
+            margin-bottom: 40px;
+        }
+        .btn-custom {
+            background-color: teal;
+            color: white;
+        }
+        #box {
+            display: none;
+        }
+        .section-divider {
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">CDN Examples</h1>
-        <p>Welcome to the CDN examples page! Below are real working examples of loading various types of content via CDNs.</p>
+        <h1 class="text-center animate__animated animate__fadeInDown">CDN Examples - Real Working Content</h1>
+        <p class="text-center">Explore different ways to load content using CDNs!</p>
 
-        <h2>1. Bootstrap CSS</h2>
-        <p>This page is styled using Bootstrap CSS loaded via a CDN.</p>
-        <button class="btn btn-primary">Bootstrap Button</button>
+        <hr class="section-divider">
 
-        <h2>2. Google Fonts</h2>
-        <p>The font for this page is <strong>Roboto</strong>, loaded via Google Fonts CDN.</p>
+        <!-- Bootstrap Example -->
+        <div class="example">
+            <h2>1. Bootstrap CSS</h2>
+            <p>This page is styled using Bootstrap CSS loaded via a CDN. Bootstrap buttons and grids are used for responsive design:</p>
+            <button class="btn btn-custom">Bootstrap Button</button>
+        </div>
 
-        <h2>3. jQuery Example</h2>
-        <p>Click the button to toggle the visibility of the box using jQuery loaded from a CDN:</p>
-        <button id="toggleBtn" class="btn btn-secondary">Toggle Box</button>
-        <div id="box" style="width: 100px; height: 100px; background-color: lightblue; margin-top: 10px;"></div>
+        <!-- Google Fonts Example -->
+        <div class="example">
+            <h2>2. Google Fonts</h2>
+            <p>The font for this page is <strong>Roboto</strong>, loaded via Google Fonts CDN.</p>
+        </div>
 
-        <h2>4. Font Awesome</h2>
-        <p>Below is an example of an icon loaded from the Font Awesome CDN:</p>
-        <i class="fas fa-coffee"></i> Coffee Icon
+        <!-- jQuery Example -->
+        <div class="example">
+            <h2>3. jQuery Example</h2>
+            <p>Click the button to toggle the visibility of the box using jQuery loaded from a CDN:</p>
+            <button id="toggleBtn" class="btn btn-secondary">Toggle Box</button>
+            <div id="box" style="width: 100px; height: 100px; background-color: lightblue; margin-top: 10px;"></div>
+        </div>
 
-        <h2>5. D3.js Example</h2>
-        <p>Below is an example of a simple bar chart created using D3.js loaded from a CDN:</p>
-        <div id="d3chart"></div>
+        <!-- Font Awesome Example -->
+        <div class="example">
+            <h2>4. Font Awesome Icons</h2>
+            <p>Icons from Font Awesome CDN can be loaded easily. Here’s an example:</p>
+            <i class="fas fa-coffee"></i> Coffee Icon
+            <i class="fas fa-heart" style="color:red;"></i> Heart Icon
+        </div>
+
+        <!-- Animate.css Example -->
+        <div class="example">
+            <h2>5. Animate.css Example</h2>
+            <p>Using Animate.css CDN, you can easily add animations to your page. Here’s a bouncing image:</p>
+            <img src="https://via.placeholder.com/150" class="animate__animated animate__bounce" alt="Bouncing Image">
+        </div>
+
+        <!-- D3.js Example -->
+        <div class="example">
+            <h2>6. D3.js Data Visualization</h2>
+            <p>Here is a simple bar chart created using D3.js loaded from a CDN:</p>
+            <div id="d3chart"></div>
+        </div>
+
+        <!-- Video.js Example -->
+        <div class="example">
+            <h2>7. Video.js Example</h2>
+            <p>Loading a video player from Video.js CDN. You can play, pause, and enjoy the video with built-in controls:</p>
+            <video id="example_video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264"
+                poster="https://via.placeholder.com/640x264"
+                data-setup="{}">
+                <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+
+        <!-- Chart.js Example -->
+        <div class="example">
+            <h2>8. Chart.js Example</h2>
+            <p>Chart.js loaded from a CDN allows you to create interactive charts. Below is a pie chart example:</p>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
 
     </div>
 
@@ -50,8 +124,17 @@
     <!-- Font Awesome CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 
+    <!-- Animate.css CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+
     <!-- D3.js from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js"></script>
+
+    <!-- Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Video.js from CDN -->
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 
     <script>
         // jQuery example for toggling box visibility
@@ -77,6 +160,36 @@
             .attr("width", 35)
             .attr("height", d => d)
             .attr("fill", "teal");
+
+        // Chart.js example to create a pie chart
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            }
+        });
     </script>
 </body>
 </html>
